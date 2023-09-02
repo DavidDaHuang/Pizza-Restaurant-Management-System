@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="menuMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu.MenuController">
+    <left>
+      <AnchorPane>
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #B2456E;">
+               <children>
+                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="10.0" text="Menu" textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="System Bold" size="20.0" />
+                          </font>
+                      </Label>
+               </children>
+            </AnchorPane>
+              <VBox alignment="CENTER" layoutY="50.0" prefHeight="550.0" prefWidth="200.0" style="-fx-background-color: #B2456E;">
+                  <children>
+                      <Button fx:id="pizzaButton" mnemonicParsing="false" onMouseClicked="#handlePizzaButton" prefHeight="50.0" prefWidth="160.0" text="Pizzas">
+                          <VBox.margin>
+                              <Insets bottom="30.0" />
+                          </VBox.margin>
+                      </Button>
+                      <Button fx:id="sidesButton" mnemonicParsing="false" onMouseClicked="#handleSidesButton" prefHeight="50.0" prefWidth="160.0" text="Sides">
+                          <VBox.margin>
+                              <Insets bottom="30.0" />
+                          </VBox.margin>
+                      </Button>
+                      <Button fx:id="dessertsButton" mnemonicParsing="false" onMouseClicked="#handleDessertsButton" prefHeight="50.0" prefWidth="160.0" text="Desserts">
+                          <VBox.margin>
+                              <Insets bottom="30.0" />
+                          </VBox.margin>
+                      </Button>
+                      <Button fx:id="drinksButton" mnemonicParsing="false" onMouseClicked="#handleDrinksButton" prefHeight="50.0" prefWidth="160.0" text="Drinks">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </Button>
+                      <Button fx:id="viewBillButton" mnemonicParsing="false" onMouseClicked="#handleViewBillButton" prefHeight="70.0" prefWidth="160.0" text="View Bill">
+                          <font>
+                              <Font size="15.0" />
+                          </font>
+                          <VBox.margin>
+                              <Insets bottom="30.0" top="20.0" />
+                          </VBox.margin>
+                      </Button>
+                  </children>
+                  <padding>
+                      <Insets left="10.0" right="10.0" />
+                  </padding>
+              </VBox>
+         </children>
+      </AnchorPane>
+    </left>
+   <center>
+      <BorderPane fx:id="menuDisplay" prefHeight="600.0" prefWidth="520.0" style="-fx-background-color: #FBEAE7;" BorderPane.alignment="CENTER">
+         <center>
+                <ImageView fitHeight="222.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                    <image>
+                        <Image url="@../images/logo.jpg" />
+                    </image>
+                </ImageView>
+         </center>
+         <top>
+                <Label text="Restaurant Management System" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+               <BorderPane.margin>
+                  <Insets top="50.0" />
+               </BorderPane.margin>
+                </Label>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>
